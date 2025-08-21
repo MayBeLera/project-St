@@ -279,6 +279,7 @@ body {
 
 /* --cards--------------------------------------------------------------------- */
 .cards {
+  background: url("../img/decor/bg.png") 50% 50% / contain repeat;
   margin-bottom: 100px;
 }
 .container {
@@ -299,6 +300,7 @@ body {
   padding: 7px 7px 13px;
   box-shadow: 0px 4px 10px 0px #00000025;
   border-radius: 10px;
+  background: #ffffff;
 }
 .card__img {
   max-width: 246px;
