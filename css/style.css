@@ -280,9 +280,7 @@ body {
 /* --cards--------------------------------------------------------------------- */
 .cards {
   background: url("../img/decor/bg.png") 50% 50% / contain repeat;
-  margin-bottom: 100px;
-}
-.container {
+  padding-bottom: 100px;
 }
 .cards__title {
   text-align: center;
