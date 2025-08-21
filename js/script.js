@@ -9,7 +9,6 @@ function burgerInit(e) {
     if(!burgerIcon && !burgerNavLink) return
     if(document.documentElement.clientWidth > 900) return
 
-  
 
     if(!document.body.classList.contains('body--opened-menu')){
         document.body.classList.add('body--opened-menu')
@@ -76,6 +75,7 @@ function syncLinkedTab(clickedTab, clickedTabType) {
         }
     }
 }
+// ----
 
 // ----
 const accordionLists = document.querySelectorAll('.accordion-list');

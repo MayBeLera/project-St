@@ -10,7 +10,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 2vw;
+  scroll-padding-top: 5vw;
 }
 body {
   font-family: "Jost", "Arial", san-serif;
@@ -82,7 +82,11 @@ body {
 
 /* --header-------------------------------------------------------------------- */
 .header {
-  padding: 15px 0;
+  width: 100%;
+  padding: 15px 0 17px;
+  position: fixed;
+  z-index: 111;
+  background: #ffffff;
 }
 .header__inner {
   display: flex;
@@ -133,10 +137,19 @@ body {
   display: flex;
   align-items: center;
 }
+.header__numbers{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
 .header__number {
-  margin: 0 22px 0 13px;
+  margin: 0 22px 0 0;
   font-weight: 600;
   font-size: 14px;
+}
+.header__socials{
+  display: flex;
+    gap: 10px
 }
 .header__btns {
   display: flex;
@@ -167,6 +180,7 @@ body {
 
 /* --banner-------------------------------------------------------------------- */
 .banner {
+  margin-top: 80px;
   padding: 53px 0px 112px;
   background: url("../img/decor/banner-bg.png") 50% 50% / contain no-repeat;
 }
@@ -299,6 +313,7 @@ body {
   box-shadow: 0px 4px 10px 0px #00000025;
   border-radius: 10px;
   background: #ffffff;
+  transition: all .3s;
 }
 .card__img {
   max-width: 246px;
@@ -407,6 +422,17 @@ body {
 .cards__show-more svg {
   transform: rotate(180deg);
 }
+
+.hidden{
+  display: none;
+}
+.hidden{
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 /* --advantages---------------------------------------------------------------- */
 .advantages {
   background: url("../img/decor/bg.png") 50% 50% / contain no-repeat;
