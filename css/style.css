@@ -96,7 +96,7 @@ body {
 .header__menu {
   display: flex;
   align-items: center;
-  gap: 59px;
+  gap: 40px;
 }
 .header-logo {
   max-width: 167px;
@@ -109,16 +109,25 @@ body {
 .header__nav-list {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
 }
 .header__nav-item {
 }
 .header__nav-link {
   padding: 6px 0;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 300;
   transition: all 0.1s ease;
   border-bottom: 0px solid var(--accent);
+}
+.header__column{
+  font-size: 13px;
+}
+.header__column-time,
+.header__column-address{
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 .active {
   border-bottom: 2px solid var(--accent);
@@ -330,7 +339,7 @@ body {
 }
 .card__info-metro,
 .card__character-name {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 300;
 }
 .metro {
@@ -346,19 +355,22 @@ body {
   text-transform: uppercase;
 }
 .card-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 4px 6px;
   border: 1px solid #edcb63;
   border-radius: 2px;
   color: #edcb63;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: normal;
 }
 .card__address p:first-child {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 300;
 }
 .card__address p:last-child {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   margin-bottom: 10px;
 }
@@ -373,9 +385,10 @@ body {
   margin-bottom: 15px;
 }
 .card__character-name {
+
 }
 .card__character-result {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: normal;
 }
 .card__cost {
@@ -384,11 +397,11 @@ body {
   margin-bottom: 17px;
 }
 .card__cost-name {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 300;
 }
 .card__cost-sum {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
 }
 .card__link {
@@ -398,7 +411,7 @@ body {
   border-radius: var(--border-btn);
   text-align: center;
   color: #ffffff;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: normal;
   transition: all 0.3s;
 }
@@ -411,7 +424,8 @@ body {
 .cards__list--show {
   display: flex;
 }
-.cards__show-more{
+/* Возможно нужно убрать */
+/* .cards__show-more{
   margin-top: 25px;
   display: flex;
   justify-content: center;
@@ -421,9 +435,9 @@ body {
 }
 .cards__show-more svg {
   transform: rotate(180deg);
-}
+} */
 
-.hidden{
+/* .hidden{
   display: none;
 }
 .hidden{
@@ -431,7 +445,7 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-}
+} */
 
 /* --advantages---------------------------------------------------------------- */
 .advantages {
