@@ -98,10 +98,10 @@ body {
   align-items: center;
   gap: 40px;
 }
-.header-logo {
+.logo {
   max-width: 167px;
 }
-.header-logo img {
+.logo img {
   width: 100%;
 }
 .header__nav {
@@ -184,7 +184,6 @@ body {
   position: absolute;
   bottom: -18px;
   font-size: 11px;
-
   border-bottom: 1px solid var(--general-text);
 }
 
@@ -193,8 +192,6 @@ body {
   margin-top: 80px;
   padding: 53px 0px 112px;
   background: url("../img/decor/banner-bg.png") 50% 50% / contain no-repeat;
-}
-.container {
 }
 .banner__inner {
   position: relative;
@@ -850,11 +847,7 @@ body {
 }
 .footer-logo {
   display: block;
-  max-width: 167px;
   margin-bottom: 23px;
-}
-.footer-logo img {
-  width: 100%;
 }
 .footer__info-time,
 .footer__info-address {
@@ -927,7 +920,6 @@ body {
   bottom: -18px;
   right: 16px;
   font-size: 11px;
-
   border-bottom: 1px solid #ffffff;
 }
 
@@ -938,16 +930,38 @@ body {
   font-size: 12px;
   font-weight: normal;
 }
-
+/* ----------------------------------------------------------------------- */
 @media (max-width: 1200px) {
   /* --header-- */
   .header__menu,
   .header__nav-list {
     gap: 20px;
   }
-  .header__number {
-    margin: 0 15px 0 10px;
+  .header__info {
+    flex-direction: column;
+    gap: 0;
   }
+  .header__socials {
+    justify-content: center;
+  }
+
+  /* --fiter-- */
+  .filter__region-list {
+    flex-wrap: wrap;
+  }
+
+  /* --advantages-- */
+  .advantages___inner {
+    justify-content: center;
+    gap: 15px;
+  }
+  .advantage {
+    padding: 10px 12px 20px;
+  }
+  /* --application-- */
+  .application__form {
+    margin-right: 40px;
+}
 }
 
 @media (max-width: 1000px) {
@@ -956,9 +970,35 @@ body {
     align-items: end;
     flex-direction: column;
   }
-  .header__number {
-    margin: 0 0 5px 0;
+
+  .header__column {
+    display: none;
   }
+
+  /* --advantages-- */
+  .advantages___inner {
+    flex-wrap: wrap;
+  }
+  .advantage:nth-child(2),
+  .advantage:nth-child(3) {
+    margin-top: 0;
+  }
+
+
+  /* --text-- */
+  .text__inner {
+    gap: 10px;
+    flex-direction: column;
+    padding: 14px 20px 14px;
+}
+.text__column:nth-child(1) {
+    padding-left: 0;
+     max-width: none;
+}
+.text__column {
+    padding: 0;
+   
+}
 }
 
 @media (max-width: 900px) {
@@ -1007,5 +1047,11 @@ body {
   .header__inner {
     background: #fffaed;
     border-radius: 5px;
+  }
+
+  /* --footer-- */
+  .footer__nav-list {
+    align-items: center;
+    flex-direction: column;
   }
 }
