@@ -18,6 +18,12 @@ function burgerInit(e) {
 }
 
 // ----
+
+const filterControls = document.querySelector('.filters')
+filterControls.addEventListener('click', toggleTab)
+function toggleTab(e){
+    e.preventDefault();
+}
 // const tabControls = document.querySelector('.filters')
 
 // tabControls.addEventListener('click', toggleTab)
