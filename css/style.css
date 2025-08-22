@@ -420,28 +420,6 @@ body {
 .cards__list--show {
   display: flex;
 }
-/* Возможно нужно убрать */
-/* .cards__show-more{
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  color: #EDCB63;
-}
-.cards__show-more svg {
-  transform: rotate(180deg);
-} */
-
-/* .hidden{
-  display: none;
-}
-.hidden{
-  display: none;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-} */
 
 /* --advantages---------------------------------------------------------------- */
 .advantages {
@@ -941,9 +919,7 @@ body {
     flex-direction: column;
     gap: 0;
   }
-  .header__socials {
-    justify-content: center;
-  }
+  
 
   /* --fiter-- */
   .filter__region-list {
@@ -1003,13 +979,20 @@ body {
 
 @media (max-width: 900px) {
   /* --header-- */
+      .header__inner {
+        background: #fffaed;
+        border-radius: 5px;
+        padding: 10px;
+    }
   .header__nav {
+    margin: 0 15px;
     position: fixed;
     inset: 0;
     z-index: 10;
     height: 60%;
-    background: var(--accent-bg);
-    box-shadow: 4px 22px 40px rgba(30, 35, 66, 0.58);
+    background: rgba(255, 250, 237, 1);
+    box-shadow: 0 4px 10px 0px #00000010;
+    border-radius: 0 5px 0 5px;
     font-size: 24px;
     align-items: center;
     padding: 5vw;
@@ -1019,16 +1002,24 @@ body {
     visibility: hidden;
     transition: all 0.4s;
   }
+
+
+
   .header__nav-list {
     flex-direction: column;
     text-align: center;
     margin-bottom: 20px;
   }
   .body--opened-menu .header__nav {
-    transform: translateY(20%);
+    transform: translateY(15%);
     opacity: 1;
     visibility: visible;
   }
+  .body--opened-menu .main {
+        /* opacity: .3; */
+        background: #ffffff20;
+        filter: blur(4.8px);
+    }
   .burger-icon {
     display: flex;
   }
@@ -1044,24 +1035,15 @@ body {
   .header__number {
     margin: 0;
   }
-  .header__inner {
-    background: #fffaed;
-    border-radius: 5px;
-  }
+
+
+
 
 
 /* --banner-- */
 .banner {
     background: url(../img/decor/banner-bg.png) 65% 60% / 137% no-repeat;
 }
-
-
-
-
-
-
-
-
 
   
   /* --footer-- */

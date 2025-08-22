@@ -18,70 +18,11 @@ function burgerInit(e) {
 }
 
 // ----
-
 const filterControls = document.querySelector('.filters')
 filterControls.addEventListener('click', toggleTab)
 function toggleTab(e){
     e.preventDefault();
 }
-// const tabControls = document.querySelector('.filters')
-
-// tabControls.addEventListener('click', toggleTab)
-
-// function toggleTab(e){
-//     const regionTab = e.target.closest('.filter__region-link');
-//     const efncTab = e.target.closest('.filter__efnc-link');
-    
-//     let clickedTab = regionTab || efncTab;
-//     if (!clickedTab) return;
-    
-//     e.preventDefault();
-
-//     const tabType = regionTab ? 'region' : 'efnc';
-//     const activeClass = tabType === 'region' ? 'active__filter-region' : 'active__filter-efnc';
-    
-//     if (clickedTab.classList.contains(activeClass)) return;
-    
-//     const tabContentID = clickedTab.getAttribute('href');
-//     const tabContent = document.querySelector(tabContentID);
-    
-//     const allTabsOfType = document.querySelectorAll(`.${activeClass}`);
-//     allTabsOfType.forEach(t => t.classList.remove(activeClass));
-    
-//     const activeContent = document.querySelector('.cards__list--show');
-//     if (activeContent) {
-//         activeContent.classList.remove('cards__list--show');
-//     }
-    
-//     clickedTab.classList.add(activeClass);
-//     if (tabContent) {
-//         tabContent.classList.add('cards__list--show');
-//     }
-//     syncLinkedTab(clickedTab, tabType);
-// }
-
-// function syncLinkedTab(clickedTab, clickedTabType) {
-//     const href = clickedTab.getAttribute('href');
-    
-//     if (clickedTabType === 'region') {
-//         const linkedEfncTab = document.querySelector(`.filter__efnc-link[href="${href}"]`);
-//         if (linkedEfncTab && !linkedEfncTab.classList.contains('active__filter-efnc')) {
-//             const activeEfncTabs = document.querySelectorAll('.active__filter-efnc');
-//             activeEfncTabs.forEach(tab => tab.classList.remove('active__filter-efnc'));
-            
-//             linkedEfncTab.classList.add('active__filter-efnc');
-//         }
-//     } else {
-//         const linkedRegionTab = document.querySelector(`.filter__region-link[href="${href}"]`);
-//         if (linkedRegionTab && !linkedRegionTab.classList.contains('active__filter-region')) {
-//             const activeRegionTabs = document.querySelectorAll('.active__filter-region');
-//             activeRegionTabs.forEach(tab => tab.classList.remove('active__filter-region'));
-            
-//             linkedRegionTab.classList.add('active__filter-region');
-//         }
-//     }
-// }
-
 
 // ----
 const accordionLists = document.querySelectorAll('.accordion-list');
