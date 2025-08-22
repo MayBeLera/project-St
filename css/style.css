@@ -1049,9 +1049,47 @@ body {
     border-radius: 5px;
   }
 
+
+/* --banner-- */
+.banner {
+    background: url(../img/decor/banner-bg.png) 65% 60% / 137% no-repeat;
+}
+
+
+
+
+
+
+
+
+
+  
   /* --footer-- */
   .footer__nav-list {
     align-items: center;
     flex-direction: column;
   }
+}
+
+
+@media (max-width: 700px) {
+  /* --banner-- */
+      .banner {
+        background: url(../img/decor/banner-bg.png) 71% 60% / 155% no-repeat;
+    }
+
+
+    .banner__text
+ {
+    position: relative;
+    background: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    text-align: center;
+    margin: 0 auto;
+}
+.banner__title {
+    text-align: center;
+    margin-bottom: 10px;
+}
 }
