@@ -993,7 +993,7 @@ body {
     position: fixed;
     inset: 0;
     z-index: 10;
-    height: 45%;
+    height: 370px;
     background: rgba(255, 250, 237, 1);
     box-shadow: 0px 10px 10px 0px #00000010;
     border-radius: 0 0 5px 5px;
@@ -1099,5 +1099,11 @@ body {
 .burger-icon span, .burger-icon span::before, .burger-icon span::after {
     width: 25px;
 }
+
+.body--opened-menu .header__nav {
+    transform: translateY(20%);
+    opacity: 1;
+    visibility: visible;
+  }
 
 }
