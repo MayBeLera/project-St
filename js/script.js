@@ -4,7 +4,7 @@ document.addEventListener('click', burgerInit);
 function burgerInit(e) {
     const burgerIcon = e.target.closest('.burger-icon');
     const burgerNavLink = e.target.closest('.header__nav-link');
-    // const headerButton = document.querySelector('.header__button')
+    const headerButtons = document.querySelector('.header__btns')
 
     if(!burgerIcon && !burgerNavLink) return
     if(document.documentElement.clientWidth > 900) return
