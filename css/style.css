@@ -972,9 +972,8 @@ body {
 
   .documents__inner {
     align-items: center;
-    text-align: center;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
   }
   .documents__slider {
     margin-top: 0px;
