@@ -1344,6 +1344,7 @@ body {
   .application {
     background: url(../img/decor/application-bg.jpg) no-repeat;
     background-size: 100% 400px;
+    margin-bottom: 50px;
   }
   .application__img {
     max-width: 85px;
