@@ -114,19 +114,55 @@ accordionLists.forEach(el => {
 // ----
 const swiper = new Swiper('.document-swiper', {
     spaceBetween: 0,
-    slidesPerView: 2,
-    centeredSlides: false, 
-    initialSlide: 0, 
+    slidesPerView: 2, 
+    centeredSlides: true, 
+    slidesOffsetBefore: 1,
+     initialSlide: 0,
     loop: true,
-     slidesOffsetBefore: 1,
+
 
 
   navigation: {
     nextEl: '.document__next',
     prevEl: '.document__prev',
   },
+  breakpoints: {
+
+            601: {
+                
+                
+              centeredSlides: false, 
+              
+            }
+          }
 
 });
+
+
+
+// const swiper = new Swiper('.document-swiper', {
+//     spaceBetween: 0,
+//     slidesPerView: 1, 
+//     centeredSlides: false, 
+//     slidesOffsetBefore: 1,
+//     initialSlide: 0, 
+//     loop: true,
+     
+
+
+//   navigation: {
+//     nextEl: '.document__next',
+//     prevEl: '.document__prev',
+//   },
+//   breakpoints: {
+
+//             631: {
+//               slidesPerView: 1.8,
+              
+//             }
+//           }
+
+// });
 
 // ----
 const inputsTel = document.querySelectorAll('input[type="tel"]');
