@@ -18,12 +18,6 @@ function burgerInit(e) {
 }
 
 // ----
-// const filterControls = document.querySelector('.filters')
-// filterControls.addEventListener('click', toggleTab)
-// function toggleTab(e){
-//     e.preventDefault();
-// }
-
 function toggleDropdownRegion() {
             const dropdown = document.getElementById("region-list");
             dropdown.classList.toggle("filter__region-open");
@@ -35,14 +29,11 @@ function toggleDropdownRegion() {
             if (!dropdown.contains(event.target) && !button.contains(event.target)) {
                 dropdown.classList.remove('filter__region-open');
             }
-        });
-            
+        });   
         }
     function toggleDropdownEfnc() {
             const dropdown = document.getElementById("efnc-list");
             dropdown.classList.toggle("filter__efnc-open");
-
-
 
             document.addEventListener('click', function(event) {
             const dropdown = document.getElementById('efnc-list');
@@ -52,12 +43,8 @@ function toggleDropdownRegion() {
                 dropdown.classList.remove('filter__efnc-open');
             }
         });
-        }
-
-        
+        }        
 // ---
-
-
 function cardMoreInfo(e) {
     const moreIcon = e.target.closest('.card-more-mobile');
     const moreInfo = e.target.closest('.header__nav-link');
@@ -75,10 +62,6 @@ function cardMoreInfo(e) {
     }
 
 }
-
-         
-
-
 // ----
 const accordionLists = document.querySelectorAll('.accordion-list');
 
@@ -117,52 +100,19 @@ const swiper = new Swiper('.document-swiper', {
     slidesPerView: 2, 
     centeredSlides: true, 
     slidesOffsetBefore: 1,
-     initialSlide: 0,
+    initialSlide: 0,
     loop: true,
-
-
-
   navigation: {
     nextEl: '.document__next',
     prevEl: '.document__prev',
   },
   breakpoints: {
-
             601: {
-                
-                
               centeredSlides: false, 
-              
             }
           }
 
 });
-
-
-
-// const swiper = new Swiper('.document-swiper', {
-//     spaceBetween: 0,
-//     slidesPerView: 1, 
-//     centeredSlides: false, 
-//     slidesOffsetBefore: 1,
-//     initialSlide: 0, 
-//     loop: true,
-     
-
-
-//   navigation: {
-//     nextEl: '.document__next',
-//     prevEl: '.document__prev',
-//   },
-//   breakpoints: {
-
-//             631: {
-//               slidesPerView: 1.8,
-              
-//             }
-//           }
-
-// });
 
 // ----
 const inputsTel = document.querySelectorAll('input[type="tel"]');
