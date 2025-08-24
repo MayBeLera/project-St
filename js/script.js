@@ -47,21 +47,28 @@ function toggleDropdownRegion() {
 // ---
 function cardMoreInfo(e) {
     const moreIcon = e.target.closest('.card-more-mobile');
-    const moreInfo = e.target.closest('.header__nav-link');
+    const moreInfo = e.target.closest('.card__characters-item');
 
-    if(!moreIcon && !moreInfo) return
-    if(document.documentElement.clientWidth > 900) return
+    if(!moreIcon && !moreInfo) return;
+    
 
     e.preventDefault();
 
-    if(!document.body.classList.contains('card-more-info')){
-        document.body.classList.add('card-more-info')
+    // Находим родительский контейнер конкретного элемента
+    const cardItem = moreIcon ? moreIcon.closest('.card__characters-list') : moreInfo.closest('.card__characters-list');
+    
+    if(!cardItem) return;
 
+    // Работаем только с конкретным элементом
+    if(!cardItem.classList.contains('card-more-info')){
+        cardItem.classList.add('card-more-info');
     } else {
-        document.body.classList.remove('card-more-info')
+        cardItem.classList.remove('card-more-info');
     }
-
 }
+
+
+
 // ----
 const accordionLists = document.querySelectorAll('.accordion-list');
 
