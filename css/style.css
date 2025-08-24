@@ -932,7 +932,7 @@ body {
   }
   /* --application-- */
   .application {
-    margin-bottom: 50px;
+    margin-bottom: 0px;
   }
   .application__inner {
     align-items: center;
@@ -948,6 +948,9 @@ body {
   .application__form {
     margin-right: 0px;
   }
+  .application__img {
+    margin-left: -20px;
+}
   .application__form input[type="text"],
   .application__form input[type="tel"],
   .application__form button {
@@ -976,6 +979,7 @@ body {
   .documents__slider {
     margin-top: 0px;
   }
+  
 }
 
 @media (max-width: 900px) {
@@ -1226,6 +1230,9 @@ body {
   .footer__nav-list {
     gap: 20px;
 }
+.footer-logo {
+    margin: 0 auto 23px;
+}
 }
 
 @media (max-width: 600px) {
@@ -1334,11 +1341,20 @@ body {
     opacity: 1;
     visibility: visible;
   }
-
+.application
+ {
+    background: url(../img/decor/application-bg.jpg) no-repeat;
+    background-size: 100% 400px;
+}
+.application__img {
+    max-width: 85px;
+  }
   .application__img {
-    margin-top: -20px;
     margin-left: 0;
   }
+  .application__text {
+    font-size: 14px;
+}
   /* --banner-- */
   .banner__title {
     margin-bottom: 4px;
