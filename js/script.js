@@ -55,8 +55,24 @@ function toggleDropdownRegion() {
         }
 
         
+// ---
+document.addEventListener('click', cardMoreInfo);
 
+function cardMoreInfo(e) {
+    const moreIcon = e.target.closest('.card-more-mobile');
+    const moreInfo = e.target.closest('.header__nav-link');
 
+    if(!moreIcon && !moreInfo) return
+    if(document.documentElement.clientWidth > 900) return
+
+    e.preventDefault();
+
+    if(!document.body.classList.contains('card-more-info')){
+        document.body.classList.add('card-more-info')
+    } else {
+        document.body.classList.remove('card-more-info')
+    }
+}
 
          
 

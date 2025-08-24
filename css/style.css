@@ -297,7 +297,7 @@ body {
 .filter__efnc-btn{
   background: none;
   text-transform: uppercase;
-  max-width: 300px;
+  max-width: 500px;
   width: 100%;
   display: none;
   align-items: center;
@@ -424,11 +424,8 @@ body {
 .card__link:hover {
   box-shadow: 0px 4px 10px 0px #00000040;
 }
-.cards__list {
+.card__characters-item-mobile{
   display: none;
-}
-.cards__list--show {
-  display: flex;
 }
 
 /* --advantages---------------------------------------------------------------- */
@@ -970,6 +967,9 @@ body {
 
 @media (max-width: 900px) {
   /* --header-- */
+  .header {
+    background: none;
+}
   .header__inner {
     background: #fffaed;
     border-radius: 5px;
@@ -1068,7 +1068,7 @@ body {
   }
   /* --banner-- */
   .banner {
-    background: url(../img/decor/banner-bg.png) 90% 40% / 155% no-repeat;
+    background: url(../img/decor/banner-bg.png) 90% 60% / 155% no-repeat;
     padding: 55px 0px;
   }
 
@@ -1117,7 +1117,7 @@ body {
   flex-direction: column;
   flex-wrap: nowrap;
   gap: 0;
-  max-width: 300px;
+  max-width: 500px;
   max-height: 0;
   overflow: hidden;
   border-radius: 2px;
@@ -1129,6 +1129,11 @@ body {
   z-index: 11;
  transition: all 0.3s;
 }
+
+.filter__efnc-link{
+  display: block;
+}
+
 .filter__region-link,
 .filter__efnc-link{
   padding: 10px 15px;
@@ -1139,6 +1144,14 @@ body {
 .filter__efcn-link:hover{
    border: none;
   border-bottom: 1px solid var(--accent);
+}
+.filter__efnc-item {
+  width: auto;
+}
+.filter__efnc-link:hover,
+.active__filter-efnc {
+  margin-left: 0;
+  border-bottom: 1px solid #edcb63;
 }
 .filter__region-list.filter__region-open,
 .filter__efnc-list.filter__efnc-open{
@@ -1161,6 +1174,39 @@ body {
 }
 
 @media (max-width: 600px) {
+  /*--cards-- */
+.card__item,
+.card__img{
+  max-width: 500px;
+  width: 100%;
+}
+.card__img img{
+  width: 100%;
+}
+.card__characters-item-mobile{
+  display: flex;
+  justify-content: center;
+  color: #edcb63;
+}
+.card-more-mobile{
+  display: flex;
+   align-items: center;
+   gap: 10px;
+  font-style: italic;
+  padding: 7px 0 15px;
+  font-size: 12px;
+}
+.card-more-mobile svg path{
+  fill: #edcb63;
+}
+.card__characters-item{
+  display: none;
+  transition: all .3s;
+}
+.card-more-info .card__characters-item{
+  display: flex;
+}
+
 }
 
 @media (max-width: 500px) {
