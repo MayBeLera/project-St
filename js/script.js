@@ -104,7 +104,7 @@ accordionLists.forEach(el => {
 // ----
 const swiper = new Swiper('.document-swiper', {
     spaceBetween: 0,
-    slidesPerView: 2, 
+    slidesPerView: 1, 
     centeredSlides: true, 
     slidesOffsetBefore: 1,
     initialSlide: 0,
@@ -115,7 +115,8 @@ const swiper = new Swiper('.document-swiper', {
   },
   breakpoints: {
             601: {
-              centeredSlides: false, 
+              centeredSlides: false,
+              slidesPerView: 2,  
             }
           }
 
