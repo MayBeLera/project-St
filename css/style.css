@@ -1083,7 +1083,8 @@ body {
   .filters,
   .cards,
   .text,
-  .application {
+  .application,
+  .documents {
     padding: 0 0 50px;
   }
   .questions {
@@ -1416,4 +1417,10 @@ body {
   .answer {
     font-size: 14px;
   }
+}
+@media (max-width: 350px){
+      .document__navigation {
+        width: 52%;
+        left: 24%;
+    }
 }
