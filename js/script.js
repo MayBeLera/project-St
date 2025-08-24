@@ -69,9 +69,11 @@ function cardMoreInfo(e) {
 
     if(!document.body.classList.contains('card-more-info')){
         document.body.classList.add('card-more-info')
+
     } else {
         document.body.classList.remove('card-more-info')
     }
+
 }
 
          
