@@ -56,7 +56,7 @@ function toggleDropdownRegion() {
 
         
 // ---
-document.addEventListener('click', cardMoreInfo);
+
 
 function cardMoreInfo(e) {
     const moreIcon = e.target.closest('.card-more-mobile');

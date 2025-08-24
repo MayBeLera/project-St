@@ -965,6 +965,9 @@ body {
 }
 
 @media (max-width: 900px) {
+  html {
+    scroll-padding-top: 120px;
+  }
   /* --header-- */
   .header {
     background: none;
@@ -1211,6 +1214,9 @@ body {
     display: flex;
   }
   /* -- */
+  .accordion-list__control {
+    gap: 10px;
+  }
   .accordion-content,
   .accordion-list__control {
     padding: 15px 20px;
@@ -1229,6 +1235,9 @@ body {
 }
 
 @media (max-width: 500px) {
+  html {
+    scroll-padding-top: 100px;
+  }
   .logo {
     max-width: 140px;
   }
