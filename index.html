@@ -99,14 +99,19 @@
             <div class="container">
                 <div class="filter__region">
                     <h2 class="filter__region-title">Выбор по округам</h2>
-                    <ul class="filter__region-list">
+                    <button class="filter__region-btn" onclick="toggleDropdownRegion()">ВАО
+                        <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.16659 8.25L10.2184 0.75H0.11477L5.16659 8.25Z" fill="#D9D9D9"/>
+                        </svg>
+                    </button>
+                    <ul class="filter__region-list" id="region-list">
+                        <li class="filter__region-item"><a class="filter__region-link" href="#" target="_blank">вао</a></li>
                         <li class="filter__region-item"><a class="filter__region-link" href="#">вао</a></li>
                         <li class="filter__region-item"><a class="filter__region-link" href="#">вао</a></li>
                         <li class="filter__region-item"><a class="filter__region-link" href="#">вао</a></li>
                         <li class="filter__region-item"><a class="filter__region-link" href="#">вао</a></li>
                         <li class="filter__region-item"><a class="filter__region-link" href="#">вао</a></li>
                         <li class="filter__region-item"><a class="filter__region-link" href="#">вао</a></li>
-                        <li class="filter__region-item"><a class="filter__region-link" href="№">вао</a></li>
                         <li class="filter__region-item"><a class="filter__region-link" href="#">вао</a></li>
                         <li class="filter__region-item"><a class="filter__region-link" href="#">вао</a></li>
                         <li class="filter__region-item"><a class="filter__region-link" href="#">вао</a></li>
@@ -114,7 +119,12 @@
                 </div>
                 <div class="filter__efnc">
                     <h2 class="filter__efnc-title">Выбор по ИФНС</h2>
-                    <ul class="filter__efnc-list">
+                    <button class="filter__efnc-btn" onclick="toggleDropdownEfnc()">ИФНС
+                        <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.16659 8.25L10.2184 0.75H0.11477L5.16659 8.25Z" fill="#D9D9D9"/>
+                        </svg>
+                    </button>
+                    <ul class="filter__efnc-list" id="efnc-list">
                         <li class="filter__efnc-item"><a class="filter__efnc-link" href="#">ИФНС 1</a></li>
                         <li class="filter__efnc-item"><a class="filter__efnc-link" href="#">ИФНС 2</a></li>
                         <li class="filter__efnc-item"><a class="filter__efnc-link" href="#">ИФНС 3</a></li>

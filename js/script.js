@@ -18,11 +18,48 @@ function burgerInit(e) {
 }
 
 // ----
-const filterControls = document.querySelector('.filters')
-filterControls.addEventListener('click', toggleTab)
-function toggleTab(e){
-    e.preventDefault();
-}
+// const filterControls = document.querySelector('.filters')
+// filterControls.addEventListener('click', toggleTab)
+// function toggleTab(e){
+//     e.preventDefault();
+// }
+
+function toggleDropdownRegion() {
+            const dropdown = document.getElementById("region-list");
+            dropdown.classList.toggle("filter__region-open");
+
+             document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('region-list');
+            const button = document.querySelector('.filter__region-btn');
+            
+            if (!dropdown.contains(event.target) && !button.contains(event.target)) {
+                dropdown.classList.remove('filter__region-open');
+            }
+        });
+            
+        }
+    function toggleDropdownEfnc() {
+            const dropdown = document.getElementById("efnc-list");
+            dropdown.classList.toggle("filter__efnc-open");
+
+
+
+            document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('efnc-list');
+            const button = document.querySelector('.filter__efnc-btn');
+            
+            if (!dropdown.contains(event.target) && !button.contains(event.target)) {
+                dropdown.classList.remove('filter__efnc-open');
+            }
+        });
+        }
+
+        
+
+
+
+         
+
 
 // ----
 const accordionLists = document.querySelectorAll('.accordion-list');
