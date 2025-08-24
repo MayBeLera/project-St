@@ -1193,7 +1193,9 @@ body {
   .answer-question__icon {
     text-align: end;
   }
-
+  .application {
+    margin-bottom: 50px;
+  }
   /* -- */
   .footer__hero {
     padding-bottom: 50px;
@@ -1344,7 +1346,6 @@ body {
   .application {
     background: url(../img/decor/application-bg.jpg) no-repeat;
     background-size: 100% 400px;
-    margin-bottom: 50px;
   }
   .application__img {
     max-width: 85px;
