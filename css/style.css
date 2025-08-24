@@ -876,6 +876,10 @@ body {
   font-size: 12px;
   font-weight: normal;
 }
+.footer__column-mobile,
+.footer__column-mobile {
+  display: none;
+}
 /* ----------------------------------------------------------------------- */
 @media (max-width: 1200px) {
   /* --header-- */
@@ -1186,6 +1190,42 @@ body {
   .answer-question__icon {
     text-align: end;
   }
+
+  /* -- */
+  .footer__hero {
+    padding-bottom: 50px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .footer__column-desktop,
+  .footer__column-desktop {
+    display: none;
+  }
+  .footer__column-mobile {
+    display: block;
+  }
+  .footer__column:first-child .footer__column-mobile {
+    text-align: center;
+  }
+  .footer__btn {
+    margin: 0 auto;
+  }
+  .footer__btn-down {
+    right: 43px;
+  }
+  .footer__column:last-child .footer__column-mobile {
+    display: flex;
+    gap: 20px;
+  }
+  .footer__info-time {
+  }
+  .footer__info-time {
+    margin-bottom: 0;
+  }
+  .footer__nav-list {
+    gap: 20px;
+}
 }
 
 @media (max-width: 600px) {
@@ -1210,6 +1250,7 @@ body {
     font-style: italic;
     padding: 7px 0 15px;
     font-size: 12px;
+    font-weight: 300;
   }
   .card-more-mobile svg path {
     fill: #edcb63;
@@ -1249,9 +1290,9 @@ body {
     max-width: auto;
     visibility: hidden;
   }
-    .document-slide {
-  max-width: none;
-}
+  .document-slide {
+    max-width: none;
+  }
   .document__navigation {
     margin: 0 auto;
     max-width: none;
@@ -1263,7 +1304,6 @@ body {
     top: 50%;
     z-index: 1;
   }
-
 }
 
 @media (max-width: 500px) {
