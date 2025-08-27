@@ -1517,6 +1517,10 @@ body {
     top: -17%;
     left: 12%;
   }
+  .modal__cancel {
+    top: 10px;
+    right: 10px;
+}
   .body--opened-menu .header__nav {
     transform: translateY(20%);
     opacity: 1;
@@ -1560,11 +1564,6 @@ body {
   .modal__text {
     font-size: 16px;
   }
-  .modal__cancel {
-    top: 10px;
-    right: 10px;
-  }
-
   .container {
     padding: 0 10px;
   }
