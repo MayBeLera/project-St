@@ -16,6 +16,58 @@ function burgerInit(e) {
         document.body.classList.remove('body--opened-menu')
     }
 }
+// ---
+    const modal = document.querySelector('.modal');
+    const modalButton = document.querySelector('.card__link');
+    
+    modalButton.addEventListener('click', openModal)
+    
+    function openModal (e){
+        e.preventDefault()
+        document.body.classList.toggle('body--opened-modal')
+    }
+
+    modal.addEventListener('click', closeModal);
+
+    function closeModal(e){
+        e.preventDefault()
+        const target = e.target
+
+        if (target.closest('.modal__cancel') || target.classList.contains('modal')){
+            document.body.classList.remove('body--opened-modal')
+        }
+    }
+// ----------
+ const cards = document.querySelectorAll('.card__item');
+            const loadMoreBtn = document.querySelector('.card__show-more');
+            const CARDS_PER_LOAD = 4;
+            let visibleCount = 8;
+
+            // Показываем кнопку если есть скрытые карточки
+            if (cards.length > 8) {
+                loadMoreBtn.classList.remove('card-hidden');
+            }
+
+            // Обработчик кнопки
+            loadMoreBtn.addEventListener('click', function(e) {
+                e.preventDefault()
+                // Показываем следующие 4 карточки
+                for (let i = visibleCount; i < visibleCount + CARDS_PER_LOAD && i < cards.length; i++) {
+                    cards[i].classList.remove('card-hidden');
+                }
+                
+                visibleCount += CARDS_PER_LOAD;
+                
+                // Скрываем кнопку если больше нет карточек
+                if (visibleCount >= cards.length) {
+                    loadMoreBtn.classList.add('card-hidden');
+                }
+            });
+
+
+
+
+
 
 // ----
 function toggleDropdownRegion() {

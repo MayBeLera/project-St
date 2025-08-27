@@ -30,9 +30,138 @@ body {
   padding: 0 15px;
   height: 100%;
 }
-.body--opened-menu {
+.body--opened-menu,
+.body--opened-modal {
   overflow: hidden;
 }
+/* modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: #0000008d;
+  z-index: 11111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+  padding: 15px;
+}
+.modal__window {
+  background-color: #fff7de;
+  border-radius: 20px;
+  padding: 38px 54px 48px 48px;
+  position: relative;
+  max-width: 964px;
+  display: flex;
+  align-items: center;
+  gap: 22px 45px;
+}
+.modal__window .application__form {
+  margin-right: 0;
+}
+.modal__cancel {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.modal__cancel path,
+.modal__cancel rect {
+  transition: all 0.4s;
+}
+.modal__cancel:hover path,
+.modal__cancel:hover rect {
+  stroke: #ac907a;
+}
+.modal__info {
+  position: relative;
+  z-index: 1;
+}
+.modal-bg {
+  position: absolute;
+  top: 10%;
+  z-index: -1;
+}
+.modal-img {
+  max-width: 179.69px;
+  margin-left: -30px;
+  margin-bottom: 80px;
+}
+.modal__title {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.modal__text {
+  width: 369.8px;
+  font-size: 18px;
+  font-weight: 300;
+}
+.application__form {
+  z-index: 1;
+}
+.application__form input[type="text"],
+.application__form input[type="tel"],
+.application__form input[type="email"],
+.application__form textarea {
+  border-radius: var(--border-btn);
+  padding: 19px 25px;
+  box-shadow: inset 4px 4px 10px 0px #00000040;
+  font-size: 16px;
+  font-weight: normal;
+  overflow: hidden;
+}
+.application__form textarea {
+  max-width: 450px;
+  max-height: 100px;
+  min-height: 100px;
+  height: 100%;
+  width: 100%;
+  resize: none;
+  overflow-y: auto;
+}
+.application__form textarea::placeholder,
+.application__form input::placeholder {
+  font-size: 16px;
+  font-weight: normal;
+  color: #b0b0b0;
+}
+
+.modal-chexbox {
+  appearance: none;
+  border: 1px solid var(--accent);
+  width: 15px;
+  height: 15px;
+  transition: all 0.4s;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 1111;
+}
+.modal-chexbox::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../img/icons/check.svg") 50% 50% no-repeat;
+  opacity: 0;
+  transition: all 0.4s;
+}
+.modal-chexbox:hover {
+  border: 1.5px solid var(--accent);
+}
+.modal-chexbox:checked::before {
+  opacity: 1;
+}
+.modal-chexbox:checked {
+  background: var(--accent);
+}
+
+.body--opened-modal .modal {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* -------------- */
 .burger-icon {
   display: none;
@@ -426,7 +555,20 @@ body {
 .card__characters-item-mobile {
   display: none;
 }
-
+.card__show-more{
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(237, 203, 99, 1);
+}
+.card-hidden{
+  display: none;
+}
 /* --advantages---------------------------------------------------------------- */
 .advantages {
   padding-bottom: 55px;
@@ -546,6 +688,7 @@ body {
   flex-shrink: 0;
   cursor: pointer;
   position: relative;
+  z-index: 1;
 }
 .form-chexbox::before {
   content: "";
@@ -555,7 +698,7 @@ body {
   opacity: 0;
   transition: all 0.4s;
 }
-.contact__checkbox:hover {
+.form-chexbox:hover {
   border: 1.5px solid var(--accent);
 }
 .form-chexbox:checked::before {
@@ -984,6 +1127,19 @@ body {
   html {
     scroll-padding-top: 120px;
   }
+  /* modal */
+  .modal__window {
+    flex-direction: column;
+  }
+  .modal-img {
+    display: none;
+  }
+
+  .modal-bg {
+    width: 400px;
+    top: -30%;
+    left: 15%;
+  }
   /* --header-- */
   .header {
     background: none;
@@ -1087,6 +1243,12 @@ body {
   }
   .questions {
     margin-bottom: 50px;
+  }
+  /* modal */
+  .modal-bg {
+    width: 350px;
+    top: -30%;
+    left: 0%;
   }
   /* --banner-- */
   .banner {
@@ -1337,7 +1499,18 @@ body {
   .burger-icon span::after {
     width: 25px;
   }
-
+  .modal__window {
+    max-width: none;
+    padding: 20px;
+  }
+  .modal__text {
+    width: auto;
+  }
+  .modal-bg {
+    width: 300px;
+    top: -17%;
+    left: 12%;
+  }
   .body--opened-menu .header__nav {
     transform: translateY(20%);
     opacity: 1;
@@ -1372,6 +1545,14 @@ body {
 @media (max-width: 400px) {
   .title {
     font-size: 22px;
+  }
+  .modal-bg {
+    width: 280px;
+    top: -10%;
+    left: 0;
+  }
+  .modal__text{
+    font-size: 16px;
   }
   .container {
     padding: 0 10px;
