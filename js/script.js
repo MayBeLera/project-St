@@ -19,7 +19,7 @@ function burgerInit(e) {
 // ---
     const modal = document.querySelector('.modal');
     const modalButtons = document.querySelectorAll('.card__link');
-    
+
     modalButtons.forEach(button => {
      button.addEventListener('click', openModal);
 });
@@ -40,35 +40,47 @@ function burgerInit(e) {
         }
     }
 // ----------
- const cards = document.querySelectorAll('.card__item');
-            const loadMoreBtn = document.querySelector('.card__show-more');
-            const CARDS_PER_LOAD = 4;
-            let visibleCount = 8;
+//  const cards = document.querySelectorAll('.card__item');
+//             const loadMoreBtn = document.querySelector('.card__show-more');
+//             const CARDS_PER_LOAD = 4;
+//             let visibleCount = 8;
 
-            // Показываем кнопку если есть скрытые карточки
-            if (cards.length > 8) {
-                loadMoreBtn.classList.remove('card-hidden');
-            }
+//             // Показываем кнопку если есть скрытые карточки
+//             if (cards.length > 8) {
+//                 loadMoreBtn.classList.remove('card-hidden');
+//             }
 
-            // Обработчик кнопки
-            loadMoreBtn.addEventListener('click', function(e) {
-                e.preventDefault()
-                // Показываем следующие 4 карточки
-                for (let i = visibleCount; i < visibleCount + CARDS_PER_LOAD && i < cards.length; i++) {
-                    cards[i].classList.remove('card-hidden');
-                }
+//             // Обработчик кнопки
+//             loadMoreBtn.addEventListener('click', function(e) {
+//                 e.preventDefault()
+//                 // Показываем следующие 4 карточки
+//                 for (let i = visibleCount; i < visibleCount + CARDS_PER_LOAD && i < cards.length; i++) {
+//                     cards[i].classList.remove('card-hidden');
+//                 }
                 
-                visibleCount += CARDS_PER_LOAD;
+//                 visibleCount += CARDS_PER_LOAD;
                 
-                // Скрываем кнопку если больше нет карточек
-                if (visibleCount >= cards.length) {
-                    loadMoreBtn.classList.add('card-hidden');
-                }
-            });
+//                 // Скрываем кнопку если больше нет карточек
+//                 if (visibleCount >= cards.length) {
+//                     loadMoreBtn.classList.add('card-hidden');
+//                 }
+//             });
 
 
+const cards = document.querySelectorAll('.card__item');
+const loadMoreBtn = document.querySelector('.card__show-more');
 
+loadMoreBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    cards.forEach(card => card.classList.remove('card-hidden'));
 
+    loadMoreBtn.classList.add('card-hidden');
+});
+
+if (cards.length > 0) {
+    loadMoreBtn.classList.remove('card-hidden');
+}
 
 
 // ----
