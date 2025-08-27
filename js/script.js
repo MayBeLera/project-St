@@ -18,7 +18,8 @@ function burgerInit(e) {
 }
 // ---
     const modal = document.querySelector('.modal');
-    const modalButtons = document.querySelectorAll('.card__link');
+    const modalButtons = document.querySelectorAll('.open-modal');
+
 
     modalButtons.forEach(button => {
      button.addEventListener('click', openModal);
