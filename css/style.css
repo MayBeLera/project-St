@@ -555,7 +555,7 @@ body {
 .card__characters-item-mobile {
   display: none;
 }
-.card__show-more{
+.card__show-more {
   margin-top: 25px;
   display: flex;
   justify-content: center;
@@ -566,7 +566,7 @@ body {
   font-size: 16px;
   color: rgba(237, 203, 99, 1);
 }
-.card-hidden{
+.card-hidden {
   display: none;
 }
 /* --advantages---------------------------------------------------------------- */
@@ -1551,9 +1551,14 @@ body {
     top: -10%;
     left: 0;
   }
-  .modal__text{
+  .modal__text {
     font-size: 16px;
   }
+  .modal__cancel {
+    top: 10px;
+    right: 10px;
+  }
+
   .container {
     padding: 0 10px;
   }

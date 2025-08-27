@@ -18,10 +18,12 @@ function burgerInit(e) {
 }
 // ---
     const modal = document.querySelector('.modal');
-    const modalButton = document.querySelector('.card__link');
+    const modalButtons = document.querySelectorAll('.card__link');
     
-    modalButton.addEventListener('click', openModal)
-    
+    modalButtons.forEach(button => {
+     button.addEventListener('click', openModal);
+});
+
     function openModal (e){
         e.preventDefault()
         document.body.classList.toggle('body--opened-modal')
