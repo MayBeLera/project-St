@@ -1475,6 +1475,9 @@ body {
     top: 50%;
     z-index: 1;
   }
+  .modal__cancel {
+    padding: 10px;
+}
 }
 
 @media (max-width: 500px) {
