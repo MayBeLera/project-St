@@ -106,39 +106,19 @@ im.mask(inputsTel)
 
 
 
-
-// let thumbsSwiper = new Swiper(".product__slider-thumbs", {
-//   spaceBetween: 10,
-//   slidesPerView: 4,
-//   freeMode: true,
-//   watchSlidesProgress: true,
-// });
-
-// // Затем основной слайдер, передавая ссылку на thumbs слайдер
-// let mainSwiper = new Swiper(".product__slider-main", {
-//   spaceBetween: 10,
-  
-//   navigation: {
-//     nextEl: ".product-next",
-//     prevEl: ".product-prev",
-//   },
-//   thumbs: {
-//     swiper: thumbsSwiper, // передаем созданный экземпляр
-//   },
-// });
-
-
-var thumbsSwiper = new Swiper(".product__slider-thumbs", {
+// ----
+let thumbsSwiper = new Swiper(".product__slider-thumbs", {
   spaceBetween: 10,
   slidesPerView: 4,
   freeMode: true,
   watchSlidesProgress: true,
+  loop: true,
 });
 
-// Затем основной слайдер с loop: true
-var mainSwiper = new Swiper(".product__slider-main", {
+
+let mainSwiper = new Swiper(".product__slider-main", {
   spaceBetween: 10,
-  loop: true, // ← добавляем эту строку
+  loop: true,
   navigation: {
     nextEl: ".product-next",
     prevEl: ".product-prev",
@@ -148,26 +128,23 @@ var mainSwiper = new Swiper(".product__slider-main", {
   },
 });
 
+    const modalClick = document.querySelector('.modal-click');
+    const modalButton = document.querySelector('.open-modal-click');
 
-var mainSwiper = new Swiper(".product__slider-main", {
-  spaceBetween: 10,
-  loop: true,
-  navigation: {
-    nextEl: ".product-next",
-    prevEl: ".product-prev",
-  },
-  on: {
-    slideChange: function() {
-      // Обновляем активный слайд в thumbs
-      var realIndex = this.realIndex;
-      thumbsSwiper.slideTo(realIndex);
+   modalButton.addEventListener('click', openModalClick);
+
+    function openModalClick (e){
+        e.preventDefault()
+        document.body.classList.toggle('body--opened-modal-click')
     }
-  }
-});
 
-var thumbsSwiper = new Swiper(".product__slider-thumbs", {
-  spaceBetween: 10,
-  slidesPerView: 4,
-  freeMode: true,
-  watchSlidesProgress: true,
-});
+    modalClick.addEventListener('click', closeModalClick);
+
+    function closeModalClick(e){
+        e.preventDefault()
+        const target = e.target 
+
+        if (target.closest('.modal__cancel') || target.classList.contains('modal-click')){
+            document.body.classList.remove('body--opened-modal-click')
+        }
+    }

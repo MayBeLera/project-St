@@ -158,7 +158,7 @@
                             </div>
                             <div class="product__btns">
                                 <a href="#" class="open-modal">Заказать адрес</a>
-                                <a href="#" >Купить в 1 клик</a>
+                                <a href="#" class="open-modal-click">Купить в 1 клик</a>
                             </div>
                             </div>
                         </div>
@@ -166,6 +166,9 @@
                             <div class="product__slider">
                                 <div class="product__slider-main swiper">
                                     <div class="swiper-wrapper">
+                                        <div class="swiper-slide product__slide-main">
+                                            <img src="img/decor/card-img.jpg" alt="">
+                                        </div>
                                         <div class="swiper-slide product__slide-main">
                                             <img src="img/decor/card-img.jpg" alt="">
                                         </div>
@@ -198,6 +201,9 @@
 
                                 <div thumbsSlider="" class="product__slider-thumbs swiper">
                                     <div class="swiper-wrapper">
+                                        <div class="swiper-slide product__slide-thumbs">
+                                            <img src="img/decor/card-img.jpg" alt="">
+                                        </div>
                                         <div class="swiper-slide product__slide-thumbs">
                                             <img src="img/decor/card-img.jpg" alt="">
                                         </div>
@@ -308,16 +314,13 @@
                             </div>
                             <div class="product__btns">
                                 <a href="#" class="open-modal">Заказать адрес</a>
-                                <a href="#" >Купить в 1 клик</a>
+                                <a href="#" class="open-modal-click" >Купить в 1 клик</a>
                             </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
-
-
 
             <section class="text general-bg">
             <div class="container">
@@ -348,8 +351,6 @@
                 </div>
             </div>
             </section>
-
-
 
             <section class="questions ">
             <div class="container">
@@ -453,7 +454,6 @@
             </div>
             </section>
 
-
             <section class="documents general-bg">
             <div class="container">
                 <div class="documents__inner">
@@ -490,7 +490,6 @@
             </div>
             </section>
 
-
             <section class="advantages general-bg">
             <div class="container">
                 <div class="advantages___inner">
@@ -518,7 +517,6 @@
                 </div>
             </div>
             </section>
-
 
             <section class="application__single-size" id="application">
             <div class="container">
@@ -640,7 +638,32 @@
         </div>
     </div>
 
-    
+    <div class="modal-click">
+        <div class="modal__window-click">
+            <a class=" modal__cancel"  href="#">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.75" y="0.75" width="22.5" height="22.5" rx="11.25" stroke="#E1D9E1" stroke-width="1.5"/>
+                    <path d="M6.75781 17.2433L12.0008 12.0003L17.2438 17.2433M17.2438 6.75732L11.9998 12.0003L6.75781 6.75732" stroke="#E1D9E1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <div class="modal__info-click">
+                <div class="modal__info-click-title">
+                    <img class="modal-click-img" src="img/decor/mark.png" alt="">
+                    <h2 class="modal__title title">Заполните данные:</h2>
+                </div>
+                <p class="modal__text modal__text-click">Для быстрой онлайн-заявки заполните форму. Мы вам перезвоним для уточнения деталей.</p>
+            </div>
+                <form class="application__form">
+                        <input type="text" placeholder="Ваше имя" required>
+                        <input type="tel" placeholder="Ваш телефон"  required>
+                        <button onclick="event.stopPropagation()" type="submit">Отправить</button>
+                        <div class="application__form-chexbox">
+                            <input class="modal-chexbox" type="checkbox" onclick="event.stopPropagation()" required>
+                            <span class="form-chexbox-text">Я согласен на обработку<a href="#" target="_blank"> персональных данных</a></span>
+                        </div>
+            </form>
+        </div>
+    </div>
     <script src="js/fslightbox.js"></script>
     <script src="js/inputmask.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
