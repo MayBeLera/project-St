@@ -321,6 +321,172 @@ body {
 .header__btns-mobile {
   display: none;
 }
+.product {
+  margin-top: 80px;
+  background: url("../img/decor/bg.png") 50% 50% / contain repeat;
+}
+.container {
+}
+.prodact__inner {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.product__column {
+  max-width: 560px;
+  width: 100%;
+}
+.breadcrumbs {
+  display: flex;
+  gap: 4px;
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+.breadcrumbs p:last-child {
+  color: var(--accent);
+}
+.product__subtitle {
+  font-weight: 300;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+.product__title {
+  color: var(--accent);
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.product__categories {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 25px;
+}
+.card-filter {
+}
+.product__description {
+  display: flex;
+  gap: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(207, 89, 89, 0.3);
+}
+.description__list {
+  width: 50%;
+}
+.decription__item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.decription__item:last-child {
+  margin-bottom: 0;
+}
+.decription__item-name,
+.decription__item-result {
+  font-size: 14px;
+}
+.decription__item-name {
+  font-weight: 300;
+}
+.decription__item-result {
+  font-weight: normal;
+}
+.product__cost {
+  padding-top: 14px;
+  margin-bottom: 45px;
+  display: flex;
+  justify-content: space-between;
+}
+.product__cost-name,
+.product__cost-result {
+  font-size: 18px;
+}
+.product__cost-name {
+  font-weight: 300;
+}
+.product__cost-result {
+  font-weight: 500;
+}
+.product__btns {
+}
+.product__btns a {
+  padding: 14px 72px;
+  border-radius: var(--border-btn);
+  transition: all 0.3s;
+}
+.product__btns a:first-child {
+  background: var(--accent);
+  color: #ffffff;
+}
+.product__btns a:last-child {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+.product__btns a:hover {
+  box-shadow: 0px 4px 10px 0px #00000040;
+}
+.product__slide-main img{
+  width: 560px;
+}
+.product__slide-main img,
+.product__slide-thumbs {
+  border-radius: 7px;
+  overflow: hidden;
+}
+.product__slider-main {
+  height: 80%;
+  width: 100%;
+  position: relative;
+}
+.product__slider-thumbs {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+.product__slider-thumbs .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+.product__slider-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-arrows {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.product-next,
+.product-prev {
+  width: 30px;
+  height: 30px;
+  background: #edcb63;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.application__single-size{
+    background: url(../img/decor/application-bg.jpg) no-repeat;
+    background-size: 100% 520px;
+    padding-bottom: 90px;
+}
 /* --banner-------------------------------------------------------------------- */
 .banner {
   margin-top: 80px;
@@ -468,6 +634,7 @@ body {
 }
 .card__img {
   max-width: 246px;
+  display: block;
 }
 .card__img img {
   width: 100%;
@@ -506,6 +673,7 @@ body {
   color: #edcb63;
   font-size: 12px;
   font-weight: normal;
+  text-transform: uppercase;
 }
 .card__address p:first-child {
   font-size: 12px;
@@ -1077,7 +1245,8 @@ body {
     margin-top: 0;
   }
   /* --application-- */
-  .application {
+  .application,
+  .application__single-size {
     margin-bottom: 0px;
   }
   .application__inner {
@@ -1241,7 +1410,8 @@ body {
   .cards,
   .text,
   .application,
-  .documents {
+  .documents,
+  .application__single-size {
     padding: 0 0 50px;
   }
   .questions {
@@ -1480,7 +1650,7 @@ body {
   }
   .modal__cancel {
     padding: 10px;
-}
+  }
 }
 
 @media (max-width: 500px) {
@@ -1520,7 +1690,7 @@ body {
   .modal__cancel {
     top: 10px;
     right: 10px;
-}
+  }
   .body--opened-menu .header__nav {
     transform: translateY(20%);
     opacity: 1;
