@@ -129,9 +129,11 @@ let mainSwiper = new Swiper(".product__slider-main", {
 });
 
     const modalClick = document.querySelector('.modal-click');
-    const modalButton = document.querySelector('.open-modal-click');
+    const modalButton = document.querySelectorAll('.open-modal-click');
 
-   modalButton.addEventListener('click', openModalClick);
+    modalButton.forEach(button => {
+     button.addEventListener('click', openModalClick);
+});
 
     function openModalClick (e){
         e.preventDefault()
