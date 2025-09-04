@@ -532,8 +532,6 @@ body {
   background: rgba(255, 247, 222, 1);
   border-radius: 10px;
 }
-.price__list {
-}
 .price__item {
   display: flex;
   justify-content: space-between;
